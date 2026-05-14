@@ -22,6 +22,39 @@
 ## Gears
 
 - Fusion 360 guide to making gears: https://www.youtube.com/watch?v=B8A_11o7QZ0
+- To minimize friction, below settings were used w/ the spur gear generation tool:
+
+```
+given 32mm wheels, and target gear ratio of 13:44 pinion to wheel gear:
+
+wheel gear:
+- teeth: 44
+- module: 0.65
+- pressure angle: 20 degrees
+- backlash: 0.15
+- root fillet radius: 0.38mm
+- gear thickness: 3mm
+- calculated pitch diameter of 28.6mm (0.65 * 44 = 28.6mm)
+- calculated outer diameter of 0.65(44 + 2) = 29.9mm
+
+pinion:
+- teeth: 13
+- module: 0.65
+- pressure angle: 20 degrees
+- backlash: 0.15
+- root fillet radius: 0.38mm
+- gear thickness: 3mm
+- calculated pitch diameter of 28.6mm (0.65 * 13 = 8.5mm)
+- calculated outer diameter of 0.65(13 + 2) = 9.75mm
+
+```
+
+- Gear train orientation
+  - ![gear-train-mount](_images/wheels-and-motor/gear-train-mount.png)
+  - The pinion gear was originally raised above the wheel gears to reduce wheel to wheel distance, but keeping the pinion at the same height as the wheel gears helps reduce friction
+  - Given module of 0.65, 44 teeth on the wheel gear, and 13 teeth on the pinion, the distance from pinion to wheel gear is at minimum:
+    - 0.65(13 + 44) / 2 = 18.525
+  - To reduce friction, a distance of 18.6mm is used
 
 ## Wheel Bearing Spacers
 
