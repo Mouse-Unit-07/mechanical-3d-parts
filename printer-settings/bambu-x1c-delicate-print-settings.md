@@ -1,0 +1,216 @@
+# Bambu X1 Carbon Printer Settings
+
+- Below are Bambu Studio printer settings for delicate prints like gears
+- Printing the gears one by one is necessary for avoiding scars and imperfections from the printer moving around to print multiple items 
+
+## Index
+
+- [Quality](#quality)
+- [Strength](#strength)
+- [Speed](#speed)
+- [Support](#support)
+- [Others](#others)
+
+## Quality
+
+- layer height
+  - layer height: 0.08mm
+  - initial layer height: 0.2mm
+  - mixed color sublayer: disabled
+- line width
+  - default: 0.42mm
+  - initial layer: 0.5mm
+  - outer wall: 0.4mm
+  - inner wall: 0.45mm
+  - top surface: 0.42mm
+  - sparse infill: 0.45mm
+  - internal solid infill: 0.42mm
+  - support: 0.42mm
+- seam
+  - seam position: aligned
+  - seam placement away from overhangs (experimental): disabled
+  - smart scarf seam application: disabled
+  - scarf application angle threshold: 155
+  - scarf around entire wall: disabled
+  - scarf steps: 10
+  - scarf join for inner walls: enabled
+  - override filament scarf seam setting: disabled
+  - role-based wipe speed: enabled
+- precision
+  - slice gap closing radius: 0.049mm
+  - resolution: 0.012mm
+  - arc fitting: enabled
+  - X-Y hole compensation: 0.03mm
+  - X-Y contour compensation: -0.02mm
+  - auto circle contour-hole compensation: disabled
+  - elephant foot compensation: 0.15mm
+  - precise Z height: disabled
+- ironing
+  - ironing type: no ironing
+- wall generator
+  - wall generator: classic
+- advanced
+  - order of walls: outer/inner
+  - print infill first: disabled
+  - bridge flow: 1
+  - thick bridges: disabled
+  - only one wall on top surfaces: top surfaces
+  - only one wall on first layer: disabled
+  - smooth speed discontinuity area: enabled
+  - smooth coefficient: 150
+  - avoid crossing wall: enabled
+  - avoid crossing wall - max detour length: 100%
+  - avoid crossing wall - includes support: disabled
+  - smoothing wall speed along Z (experimental): disabled
+
+## Strength
+
+- walls
+  - wall loops: 4
+  - embedding the wall into the infill: disabled
+  - detect thin wall: disabled
+- top/bottom shells
+  - top surface pattern: monotonic line
+  - top surface density: 100%
+  - top shell layers: 9
+  - top shell thickness: 0.8mm
+  - top paint penetration layers: 9
+  - bottom surface pattern: monotonic
+  - bottom surface density: 100%
+  - bottom shell layers: 7
+  - bottom shell thickness: 0mm
+  - bottom paint penetration layers: 7
+  - internal solid infill pattern: rectilinear
+- sparse infill:
+  - sparse infill density: 100%
+  - fill multiline: 1
+  - sparse infill pattern: rectilinear
+  - length of sparse infill anchor: 400%
+  - maximum length of sparse infill anchor: 20mm
+- advanced:
+  - infill/wall overlap: 15%
+  - infill direction: 45 degrees
+  - bridge direction: 0 degrees
+  - minimum sparse infill threshold: 15mm^2
+  - infill combination: disabled
+  - detect narrow internal solid infill: enabled
+  - ensure vertical shell thickness: enabled
+  - detect floating vertical shells: enabled
+
+## Speed
+
+- initial layer speed:
+  - initial layer: 20mm/s
+  - initial layer infill: 105mm/s
+- other layers speed:
+  - outer wall: 30mm/s
+  - inner wall: 70mm/s
+  - small perimeters: 50%
+  - small perimeter threshold: 0mm
+  - sparse infill: 450mm/s
+  - internal solid infill: 350mm/s
+  - vertical shell speed: 80%
+  - top surface: 200mm/s
+  - slow down for overhangs: enabled
+  - overhang speed:
+    - 60mm/s: 10%
+    - 30mm/s: 25%
+    - 10mm/s: 50%
+    - 10mm/s: 75%
+    - 10mm/s: 100%
+  - slow down by height: disabled
+  - bridge: 50mm/s
+  - gap infill: 350mm/s
+  - support: 150mm/s
+  - support interface: 80mm/s
+- travel speed:
+  - travel: 500mm/s
+- acceleration:
+  - normal printing: 10000mm/s^2
+  - travel: 4000mm/s^2
+  - initial layer travel: 6000mm/s^2
+  - initial layer: 500mm/s^2
+  - outer wall: 1200mm/s^2
+  - inner wall: 0mm/s^2
+  - top surface: 2000mm/s^2
+  - sparse infill: 100%
+
+## Support
+
+- support
+  - enable support: enabled
+  - type: tree(auto)
+  - style: default
+  - threshold angle: 15
+  - on build plate only: disabled
+  - support critical regions only: disabled
+  - remove small overhangs: enabled
+- raft:
+  - raft layers: 0
+- filament supports:
+  - support/raft base: default
+  - support/raft interface: default
+- advanced:
+  - initial layer density: 90%
+  - initial layer expansion: -1mm
+  - support wall loops: -1
+  - top z distance: 0.08mm
+  - bottom z distance: 0.08mm
+  - base pattern: default
+  - base pattern spacing: 2.5mm
+  - pattern angle: 0 degrees
+  - top interface layers: 2 layers
+  - interface pattern: default
+  - top interface spacing: 0.5mm
+  - normal support expansion: 0mm
+  - support/object xy distance: 0.35mm
+  - z overrides x/y: disabled
+  - support/object first layer gap: 0.2mm
+  - max bridge length: 0mm
+  - independent support layer height: enabled
+- tree support:
+  - branch distance: 5mm
+  - branch diameter: 2mm
+  - branch angle: 45 degrees
+  - branch diameter angle: 5 degrees
+
+## Others
+
+
+- bed adhesion:
+  - skirt loops: 0
+  - skirt height: 1
+  - brim type: auto
+  - brim width: 5mm
+  - brim-object gap: 0.1mm
+- prime tower:
+  - enable: enabled
+  - skip points: enabled
+  - internal ribs: disabled
+  - width: 35mm
+  - max speed: 90mm/s
+  - brim width: 3mm
+  - infill gap: 150%
+  - rib wall: enabled
+  - extra rib length: 0mm
+  - rib width: 8mm
+  - fillet wall: enabled
+- purge options:
+  - purge into objects' infill: disabled
+  - purge into objects' support: enabled
+- special mode:
+  - slicing mode: regular
+  - print sequence: by layer
+  - spiral vase: disabled
+  - timelapse: traditional
+  - fuzzy skin: none
+  - fuzzy skin generator mode: displacement
+  - fuzzy skin noise type: classic
+  - fuzzy skin point distance: 0.3mm
+  - fuzzy skin thickness: 0.2mm
+  - apply fuzzy skin to first layer: disabled
+- advanced:
+  - use beam interlocking: disabled
+  - interlocking depth of a segmented region: 0mm
+- g-code output:
+  - reduce infill retraction: auto
